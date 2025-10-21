@@ -10,14 +10,15 @@ export default function HomePage() {
   const [isVisible, setIsVisible] = useState(false)
   const [currentText, setCurrentText] = useState("")
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
-  const fullText = "Modern Wedding Storytelling Crafted with Precision and Soul"
+  const fullText = "Timeless Wedding Stories That Make You Feel It All Over Again"
 
   const carouselImages = [
-    "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=600&fit=crop&crop=faces",
-    "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&h=600&fit=crop&crop=faces",
-    "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=800&h=600&fit=crop&crop=faces",
-    "https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=800&h=600&fit=crop&crop=faces",
-    "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&h=600&fit=crop&crop=center",
+    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/JIM_5943-ja36Jza8xTUcXnOfNbkNRDMlljgy1u.jpg",
+    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/JIM_5974-aj9zCmAMde1I0aBluyhghD6hSoSaiH.jpg",
+    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/JIM_4538-BWQDsa65vl8j2ekJGCksXjgN1n7YFR.jpg",
+    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/JIM_4568-ozSQ5Ee6jASmkENBszwORf78rYmWak.jpg",
+    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/JIM_4488-f19R3VnHZqbeHG2Eyymwo22QKbJKEk.jpg",
+    "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/JIM_5964-wwTq4hJaSI4zmP8OPJrRkMT1L3ddwb.jpg",
   ]
 
   useEffect(() => {
@@ -35,7 +36,7 @@ export default function HomePage() {
 
     const imageTimer = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % carouselImages.length)
-    }, 3000)
+    }, 4000)
 
     return () => {
       clearInterval(timer)
@@ -45,53 +46,32 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-stone-50 via-amber-50/30 to-stone-100">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-md border-b border-stone-200/50 z-50 shadow-sm">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <Link
-              href="/"
-              className="text-2xl font-serif font-bold bg-gradient-to-r from-amber-800 to-stone-900 bg-clip-text text-transparent"
-            >
-              Kaplong Creative
-            </Link>
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="/about" className="text-stone-600 hover:text-amber-700 transition-colors font-medium">
-                About
-              </Link>
-              <Link href="/portfolio" className="text-stone-600 hover:text-amber-700 transition-colors font-medium">
-                Portfolio
-              </Link>
-              <Link href="/services" className="text-stone-600 hover:text-amber-700 transition-colors font-medium">
-                Services
-              </Link>
-              <Link href="/testimonials" className="text-stone-600 hover:text-amber-700 transition-colors font-medium">
-                Testimonials
-              </Link>
-              <Link href="/blog" className="text-stone-600 hover:text-amber-700 transition-colors font-medium">
-                Journal
-              </Link>
-              <Link href="/contact" className="text-stone-600 hover:text-amber-700 transition-colors font-medium">
-                Contact
-              </Link>
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-stone-200/50 shadow-sm">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <Link href="/" className="flex items-center space-x-3 group">
+            <div className="w-10 h-10 bg-gradient-to-br from-amber-600 to-stone-700 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow">
+              <span className="text-white font-bold text-lg">K</span>
             </div>
-            <Button
-              asChild
-              className="bg-gradient-to-r from-amber-700 to-amber-800 hover:from-amber-800 hover:to-amber-900 shadow-lg"
-            >
-              <Link href="/contact">Book Now</Link>
-            </Button>
-          </div>
+            <span className="text-2xl font-serif font-bold bg-gradient-to-r from-amber-700 via-stone-800 to-amber-900 bg-clip-text text-transparent group-hover:scale-105 transition-transform">
+              Kaplong Creative
+            </span>
+          </Link>
+          <Button
+            asChild
+            size="lg"
+            className="bg-gradient-to-r from-amber-700 to-amber-900 hover:from-amber-800 hover:to-stone-900 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-semibold"
+          >
+            <Link href="/contact">Book Your Date</Link>
+          </Button>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 relative overflow-hidden min-h-screen flex items-center">
+      <section className="pt-24 pb-16 relative overflow-hidden min-h-screen flex items-center">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-amber-900/10 via-stone-900/5 to-amber-800/10"></div>
           <div className="absolute top-20 left-10 w-32 h-32 bg-amber-200/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-40 h-40 bg-stone-300/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-amber-300/15 rounded-full blur-2xl animate-pulse delay-500"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-6 relative">
@@ -103,58 +83,52 @@ export default function HomePage() {
                 className={`inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-100 to-green-100 rounded-full text-sm text-emerald-800 mb-4 shadow-lg border border-emerald-200/50 transform transition-all duration-700 delay-300 ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}
               >
                 <span className="w-3 h-3 bg-emerald-500 rounded-full mr-3 animate-pulse shadow-lg"></span>
-                <span className="font-semibold">Available for 2024-2025 Weddings</span>
+                <span className="font-semibold">📍 Based in Nakuru • Serving All of Kenya</span>
+              </div>
+
+              <div className="text-center lg:text-left">
+                <h1 className="text-7xl lg:text-9xl font-serif font-bold mb-6 text-balance">
+                  <span className="bg-gradient-to-br from-amber-700 via-stone-900 to-amber-900 bg-clip-text text-transparent drop-shadow-lg block">
+                    Kaplong
+                  </span>
+                  <span className="bg-gradient-to-br from-stone-800 via-amber-800 to-stone-900 bg-clip-text text-transparent drop-shadow-lg block">
+                    Creative
+                  </span>
+                </h1>
               </div>
 
               <div className="space-y-6">
-                <h1 className="text-6xl lg:text-8xl font-serif font-bold leading-[0.85] text-balance min-h-[280px]">
-                  <span className="bg-gradient-to-br from-stone-900 via-amber-900 via-stone-800 to-amber-800 bg-clip-text text-transparent drop-shadow-sm">
+                <h2 className="text-4xl lg:text-5xl font-serif font-bold leading-tight text-balance min-h-[200px]">
+                  <span className="bg-gradient-to-br from-stone-900 via-amber-900 to-stone-800 bg-clip-text text-transparent drop-shadow-sm">
                     {currentText}
                   </span>
                   <span className="animate-pulse text-amber-600">|</span>
-                </h1>
+                </h2>
 
-                <div className="space-y-4">
-                  <p
-                    className={`text-2xl lg:text-3xl font-light bg-gradient-to-r from-amber-700 via-stone-600 to-amber-800 bg-clip-text text-transparent text-pretty transform transition-all duration-700 delay-500 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"}`}
-                  >
-                    Photography • Videography • Drone • Content Creation
-                  </p>
-                  <p
-                    className={`text-xl text-amber-700 font-semibold tracking-wide transform transition-all duration-700 delay-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"}`}
-                  >
-                    🇰🇪 Kenya & Beyond
-                  </p>
-                </div>
+                <p className="text-2xl text-stone-700 leading-relaxed font-light">
+                  <span className="font-semibold text-amber-800">Your love deserves more than snapshots.</span> We
+                  capture the tears, the laughter, the stolen glances—every moment that makes your heart skip a beat.
+                </p>
               </div>
 
-              <div
-                className={`space-y-8 transform transition-all duration-700 delay-900 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"}`}
-              >
-                <p className="text-xl text-stone-700 text-pretty leading-relaxed font-light">
-                  <span className="font-semibold text-amber-800">Candid. Clean. Cinematic.</span> We are a collective of
-                  creatives capturing weddings with a fresh perspective and editorial feel that stands the test of time.
-                </p>
-
-                <div className="grid grid-cols-3 gap-6 p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-amber-200/30 shadow-lg">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold bg-gradient-to-br from-amber-700 to-amber-900 bg-clip-text text-transparent">
-                      200+
-                    </div>
-                    <div className="text-sm text-stone-600 font-medium">Weddings</div>
+              <div className="grid grid-cols-3 gap-6 p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-amber-200/30 shadow-xl">
+                <div className="text-center">
+                  <div className="text-4xl font-bold bg-gradient-to-br from-amber-700 to-amber-900 bg-clip-text text-transparent">
+                    200+
                   </div>
-                  <div className="text-center border-x border-stone-200">
-                    <div className="text-3xl font-bold bg-gradient-to-br from-amber-700 to-amber-900 bg-clip-text text-transparent">
-                      5+
-                    </div>
-                    <div className="text-sm text-stone-600 font-medium">Years Experience</div>
+                  <div className="text-sm text-stone-600 font-medium">Happy Couples</div>
+                </div>
+                <div className="text-center border-x border-stone-200">
+                  <div className="text-4xl font-bold bg-gradient-to-br from-amber-700 to-amber-900 bg-clip-text text-transparent">
+                    5★
                   </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold bg-gradient-to-br from-amber-700 to-amber-900 bg-clip-text text-transparent">
-                      15+
-                    </div>
-                    <div className="text-sm text-stone-600 font-medium">Counties Covered</div>
+                  <div className="text-sm text-stone-600 font-medium">Average Rating</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-bold bg-gradient-to-br from-amber-700 to-amber-900 bg-clip-text text-transparent">
+                    48hr
                   </div>
+                  <div className="text-sm text-stone-600 font-medium">Sneak Peek</div>
                 </div>
               </div>
 
@@ -164,17 +138,17 @@ export default function HomePage() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-gradient-to-r from-amber-700 via-amber-800 to-stone-800 hover:from-amber-800 hover:via-amber-900 hover:to-stone-900 text-lg px-10 py-7 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 font-semibold"
+                  className="bg-gradient-to-r from-amber-700 via-amber-800 to-stone-800 hover:from-amber-800 hover:via-amber-900 hover:to-stone-900 text-xl px-12 py-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-110 font-bold"
                 >
-                  <Link href="/portfolio">📸 View Our Work</Link>
+                  <Link href="/contact">📅 Check Your Date</Link>
                 </Button>
                 <Button
                   asChild
                   variant="outline"
                   size="lg"
-                  className="border-2 border-amber-300 text-amber-800 hover:bg-amber-50 bg-white/90 backdrop-blur-sm text-lg px-10 py-7 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 font-semibold"
+                  className="border-2 border-amber-300 text-amber-800 hover:bg-amber-50 bg-white/90 backdrop-blur-sm text-xl px-12 py-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-110 font-bold"
                 >
-                  <Link href="/contact">✨ Check Availability</Link>
+                  <Link href="/portfolio">✨ See Real Weddings</Link>
                 </Button>
               </div>
             </div>
@@ -185,20 +159,25 @@ export default function HomePage() {
               <div className="absolute -inset-6 bg-gradient-to-br from-amber-300/30 via-stone-300/20 to-amber-400/30 rounded-3xl opacity-60 blur-2xl animate-pulse"></div>
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-200/20 to-stone-300/20 rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
-                <Image
-                  src="https://images.unsplash.com/photo-1519741497674-611481863552?w=700&h=800&fit=crop&crop=faces"
-                  alt="Wedding photography by Kaplong Creative - Elegant bride and groom"
-                  width={700}
-                  height={800}
-                  className="relative rounded-3xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 transform group-hover:scale-[1.02] border-4 border-white/50"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-amber-900/30 via-transparent to-stone-900/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                <div className="absolute -top-4 -right-4 bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg animate-bounce delay-1000">
-                  <span className="text-2xl">📷</span>
-                </div>
-                <div className="absolute -bottom-4 -left-4 bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg animate-bounce delay-1500">
-                  <span className="text-2xl">💍</span>
+                <div className="relative w-full h-[800px] rounded-3xl overflow-hidden shadow-2xl group-hover:shadow-3xl transition-all duration-500 transform group-hover:scale-[1.02] border-4 border-white/50">
+                  {carouselImages.map((image, index) => (
+                    <div
+                      key={index}
+                      className={`absolute inset-0 transition-opacity duration-1500 ${
+                        index === currentImageIndex ? "opacity-100" : "opacity-0"
+                      }`}
+                    >
+                      <Image
+                        src={image || "/placeholder.svg"}
+                        alt={`Real wedding captured by Kaplong Creative ${index + 1}`}
+                        fill
+                        className={`object-cover transition-transform duration-[8000ms] ${
+                          index === currentImageIndex ? "scale-110" : "scale-100"
+                        }`}
+                        priority={index === 0}
+                      />
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -360,48 +339,48 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             <div className="aspect-square relative overflow-hidden rounded-lg group">
               <Image
-                src="https://images.unsplash.com/photo-1519741497674-611481863552?w=400&h=400&fit=crop&crop=faces"
-                alt="Wedding ceremony moment"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/JIM_5943-ja36Jza8xTUcXnOfNbkNRDMlljgy1u.jpg"
+                alt="Bride and groom with wedding car"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
             <div className="aspect-square relative overflow-hidden rounded-lg group">
               <Image
-                src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=400&h=400&fit=crop&crop=faces"
-                alt="First dance photography"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/JIM_4568-ozSQ5Ee6jASmkENBszwORf78rYmWak.jpg"
+                alt="Bride opening gift"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
             <div className="aspect-square relative overflow-hidden rounded-lg group">
               <Image
-                src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=400&h=400&fit=crop&crop=faces"
-                alt="Bridal portrait"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/JIM_4371%20%281%29-XjAmRepwlFldKSM562cLBU5X9Qfoye.jpg"
+                alt="Wedding rings detail"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
             <div className="aspect-square relative overflow-hidden rounded-lg group">
               <Image
-                src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=400&h=400&fit=crop&crop=faces"
-                alt="Engagement session"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/JIM_4488-f19R3VnHZqbeHG2Eyymwo22QKbJKEk.jpg"
+                alt="Bride with bridesmaids"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
             <div className="aspect-square relative overflow-hidden rounded-lg group">
               <Image
-                src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=400&h=400&fit=crop&crop=center"
-                alt="Wedding details"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/JIM_5974-aj9zCmAMde1I0aBluyhghD6hSoSaiH.jpg"
+                alt="Wedding party fun moment"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-300"
               />
             </div>
             <div className="aspect-square relative overflow-hidden rounded-lg group">
               <Image
-                src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&h=400&fit=crop&crop=faces"
-                alt="Couple portrait"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/JIM_4538-BWQDsa65vl8j2ekJGCksXjgN1n7YFR.jpg"
+                alt="Bridal portrait outdoors"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-300"
               />

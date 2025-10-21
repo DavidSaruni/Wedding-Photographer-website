@@ -4,54 +4,46 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
-import Link from "next/link"
 import { Phone, Mail, MessageCircle, Instagram } from "lucide-react"
+import Image from "next/image"
+import { Navigation } from "@/components/Navigation"
 
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-stone-50">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-stone-200 z-50">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="text-2xl font-serif font-bold text-stone-900">
-              Kaplong Creative
-            </Link>
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="/about" className="text-stone-700 hover:text-stone-900 transition-colors">
-                About
-              </Link>
-              <Link href="/portfolio" className="text-stone-700 hover:text-stone-900 transition-colors">
-                Portfolio
-              </Link>
-              <Link href="/services" className="text-stone-700 hover:text-stone-900 transition-colors">
-                Services
-              </Link>
-              <Link href="/testimonials" className="text-stone-700 hover:text-stone-900 transition-colors">
-                Testimonials
-              </Link>
-              <Link href="/blog" className="text-stone-700 hover:text-stone-900 transition-colors">
-                Journal
-              </Link>
-              <Link href="/contact" className="text-stone-700 hover:text-stone-900 transition-colors font-semibold">
-                Contact
-              </Link>
-            </div>
-            <Button asChild className="bg-stone-900 hover:bg-stone-800">
-              <Link href="/contact">Book Now</Link>
-            </Button>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       <div className="pt-24 pb-16">
         <div className="max-w-6xl mx-auto px-6">
+          {/* Hero Image Section */}
+          <div className="relative h-[300px] rounded-3xl overflow-hidden mb-12 shadow-2xl">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/JIM_5974-aj9zCmAMde1I0aBluyhghD6hSoSaiH.jpg"
+              alt="Contact Kaplong Creative"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-stone-900/90 via-stone-900/60 to-stone-900/30 flex items-center justify-center">
+              <div className="text-center px-6">
+                <h1 className="text-4xl lg:text-5xl font-serif font-bold text-white mb-6 text-balance">
+                  Let's Create Magic Together
+                </h1>
+                <p className="text-xl text-amber-100 max-w-2xl mx-auto">
+                  Ready to capture your love story? We'll get back within 24 hours. Your love story deserves to be told
+                  beautifully.
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl lg:text-5xl font-serif font-bold text-stone-900 mb-6">
+            {/* Updated header text color and gradient background */}
+            <h1 className="text-4xl lg:text-5xl font-serif font-bold text-white mb-6 text-balance">
               Let's Create Magic Together
             </h1>
-            <p className="text-xl text-stone-600 max-w-2xl mx-auto text-pretty">
+            <p className="text-xl text-amber-100 max-w-2xl mx-auto">
               Ready to capture your love story? We'll get back within 24 hours. Your love story deserves to be told
               beautifully.
             </p>

@@ -4,81 +4,128 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
+import { Navigation } from "@/components/Navigation"
 
-const categories = ["All", "Weddings", "Engagements", "Bridal Morning", "Drone Moments", "Details & Decor"]
+const categories = [
+  "All",
+  "Weddings",
+  "Retreats",
+  "Nature",
+  "Corporate Events",
+  "Engagements",
+  "Bridal Morning",
+  "Drone Moments",
+  "Details & Decor",
+]
 
 const portfolioImages = [
   {
-    category: "Weddings",
-    title: "Sunset vows in Naivasha",
-    id: 1,
-    src: "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=600&fit=crop&crop=faces",
-  },
-  {
     category: "Bridal Morning",
-    title: "Bridal prep in Nairobi",
+    title: "Bridal prep elegance",
+    id: 1,
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/015A1322-S9tvbBiT3HNL1L5UMd9qQjPZNUGQWY.jpg",
+  },
+  {
+    category: "Weddings",
+    title: "Bride with vibrant bouquet",
     id: 2,
-    src: "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=600&h=600&fit=crop&crop=faces",
-  },
-  {
-    category: "Engagements",
-    title: "Love session at Karen",
-    id: 3,
-    src: "https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=600&h=600&fit=crop&crop=faces",
-  },
-  {
-    category: "Drone Moments",
-    title: "Aerial ceremony view",
-    id: 4,
-    src: "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600&h=600&fit=crop&crop=center",
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/015A1153-4muQg3rLCW1J4e5WF0hrnzuxIrjLrh.jpg",
   },
   {
     category: "Details & Decor",
-    title: "Wedding rings and flowers",
-    id: 5,
-    src: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&h=600&fit=crop&crop=center",
-  },
-  {
-    category: "Weddings",
-    title: "First dance magic",
-    id: 6,
-    src: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&h=600&fit=crop&crop=faces",
+    title: "Wedding rings in box",
+    id: 3,
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/JIM_4371%20%281%29-XjAmRepwlFldKSM562cLBU5X9Qfoye.jpg",
   },
   {
     category: "Bridal Morning",
     title: "Getting ready moments",
+    id: 4,
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/015A1256-c9hYfentfpjwd3RYcgBrHw7bnAbc8p.jpg",
+  },
+  {
+    category: "Details & Decor",
+    title: "Ring ceremony details",
+    id: 5,
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/JIM_4371-SxyPVPtCgYefPYzWUfWHWlTOd4dEuE.jpg",
+  },
+  {
+    category: "Weddings",
+    title: "Bridal party celebration",
+    id: 6,
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/015A1288-FNkZfkZrZITob9sN1HPzRsfwdYB2gE.jpg",
+  },
+  {
+    category: "Details & Decor",
+    title: "Elegant ring presentation",
     id: 7,
-    src: "https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?w=600&h=600&fit=crop&crop=faces",
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/JIM_4351%20%281%29-etfeQJVp4jC3gONhINHfiEIRdV9A04.jpg",
+  },
+  {
+    category: "Details & Decor",
+    title: "Wedding shoes and rings",
+    id: 8,
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/JIM_4360-MGtcPa0TFFebsSf2piQ7MagNgbTrsh.jpg",
+  },
+  {
+    category: "Details & Decor",
+    title: "Ring box on table",
+    id: 9,
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/JIM_4351-B44TSWGog6kTUytPRUCpJjOJuxRXeu.jpg",
+  },
+  {
+    category: "Retreats",
+    title: "Wellness retreat in Nanyuki",
+    id: 10,
+    src: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=600&fit=crop&crop=center",
+  },
+  {
+    category: "Retreats",
+    title: "Team building moments",
+    id: 11,
+    src: "https://images.unsplash.com/photo-1528605105345-5344ea20e269?w=600&h=600&fit=crop&crop=center",
+  },
+  {
+    category: "Nature",
+    title: "Wildlife conservation project",
+    id: 12,
+    src: "https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600&h=600&fit=crop&crop=center",
+  },
+  {
+    category: "Nature",
+    title: "Landscape photography session",
+    id: 13,
+    src: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=600&fit=crop&crop=center",
+  },
+  {
+    category: "Corporate Events",
+    title: "Annual gala dinner",
+    id: 14,
+    src: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&h=600&fit=crop&crop=center",
+  },
+  {
+    category: "Corporate Events",
+    title: "Product launch event",
+    id: 15,
+    src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=600&fit=crop&crop=center",
+  },
+  {
+    category: "Engagements",
+    title: "Love session at Karen",
+    id: 16,
+    src: "https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=600&h=600&fit=crop&crop=faces",
   },
   {
     category: "Engagements",
     title: "Couple's portrait session",
-    id: 8,
+    id: 17,
     src: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=600&h=600&fit=crop&crop=faces",
   },
   {
     category: "Drone Moments",
-    title: "Reception from above",
-    id: 9,
-    src: "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=600&h=600&fit=crop&crop=center",
-  },
-  {
-    category: "Details & Decor",
-    title: "Table setting elegance",
-    id: 10,
-    src: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&h=600&fit=crop&crop=center",
-  },
-  {
-    category: "Weddings",
-    title: "Ceremony emotions",
-    id: 11,
-    src: "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=600&h=600&fit=crop&crop=faces",
-  },
-  {
-    category: "Bridal Morning",
-    title: "Bride's final touches",
-    id: 12,
-    src: "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?w=600&h=600&fit=crop&crop=faces",
+    title: "Aerial ceremony view",
+    id: 18,
+    src: "https://images.unsplash.com/photo-1606800052052-a08af7148866?w=600&h=600&fit=crop&crop=center",
   },
 ]
 
@@ -91,38 +138,7 @@ export default function PortfolioPage() {
   return (
     <div className="min-h-screen bg-stone-50">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-stone-200 z-50">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="text-2xl font-serif font-bold text-stone-900">
-              Kaplong Creative
-            </Link>
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="/about" className="text-stone-700 hover:text-stone-900 transition-colors">
-                About
-              </Link>
-              <Link href="/portfolio" className="text-stone-700 hover:text-stone-900 transition-colors font-semibold">
-                Portfolio
-              </Link>
-              <Link href="/services" className="text-stone-700 hover:text-stone-900 transition-colors">
-                Services
-              </Link>
-              <Link href="/testimonials" className="text-stone-700 hover:text-stone-900 transition-colors">
-                Testimonials
-              </Link>
-              <Link href="/blog" className="text-stone-700 hover:text-stone-900 transition-colors">
-                Journal
-              </Link>
-              <Link href="/contact" className="text-stone-700 hover:text-stone-900 transition-colors">
-                Contact
-              </Link>
-            </div>
-            <Button asChild className="bg-stone-900 hover:bg-stone-800">
-              <Link href="/contact">Book Now</Link>
-            </Button>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       <div className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-6">
@@ -132,7 +148,8 @@ export default function PortfolioPage() {
               Our Portfolio
             </h1>
             <p className="text-xl text-stone-700 max-w-2xl mx-auto text-pretty">
-              A collection of love stories captured with intention, artistry, and heart
+              A collection of moments captured with intention, artistry, and heart across weddings, retreats, nature,
+              and corporate events
             </p>
           </div>
 

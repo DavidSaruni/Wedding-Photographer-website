@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link"
 import { Check } from "lucide-react"
+import Image from "next/image"
+import { Navigation } from "@/components/Navigation"
 
 const packages = [
   {
@@ -60,41 +62,31 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-stone-50">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-stone-200 z-50">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="text-2xl font-serif font-bold text-stone-900">
-              Kaplong Creative
-            </Link>
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="/about" className="text-stone-700 hover:text-stone-900 transition-colors">
-                About
-              </Link>
-              <Link href="/portfolio" className="text-stone-700 hover:text-stone-900 transition-colors">
-                Portfolio
-              </Link>
-              <Link href="/services" className="text-stone-700 hover:text-stone-900 transition-colors font-semibold">
-                Services
-              </Link>
-              <Link href="/testimonials" className="text-stone-700 hover:text-stone-900 transition-colors">
-                Testimonials
-              </Link>
-              <Link href="/blog" className="text-stone-700 hover:text-stone-900 transition-colors">
-                Journal
-              </Link>
-              <Link href="/contact" className="text-stone-700 hover:text-stone-900 transition-colors">
-                Contact
-              </Link>
-            </div>
-            <Button asChild className="bg-stone-900 hover:bg-stone-800">
-              <Link href="/contact">Book Now</Link>
-            </Button>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       <div className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-6">
+          {/* Hero Image Section */}
+          <div className="relative h-[350px] rounded-3xl overflow-hidden mb-12 shadow-2xl">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/JIM_5943-ja36Jza8xTUcXnOfNbkNRDMlljgy1u.jpg"
+              alt="Wedding photography services"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-stone-900/90 via-stone-900/70 to-transparent flex items-center">
+              <div className="px-12 max-w-3xl">
+                <h1 className="text-4xl lg:text-5xl font-serif font-bold text-white mb-6 text-balance">
+                  Everything You Need to Remember Your Day — Beautifully
+                </h1>
+                <p className="text-xl text-amber-100 leading-relaxed">
+                  From intimate ceremonies to grand celebrations, we offer comprehensive wedding documentation services
+                  tailored to your vision.
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl lg:text-5xl font-serif font-bold text-stone-900 mb-6">
