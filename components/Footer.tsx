@@ -2,28 +2,28 @@ import Link from "next/link"
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-stone-800 via-amber-900 to-stone-900 text-white py-12">
+    <footer className="bg-black text-white py-12">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-serif font-bold bg-gradient-to-r from-amber-200 to-white bg-clip-text text-transparent mb-4">
+            <h3 className="text-xl font-serif font-bold text-white mb-4">
               Kaplong Creative
             </h3>
-            <p className="text-amber-100 mb-4 font-medium">Your Story. Our Creative Obsession.</p>
+            <p className="text-gray-300 mb-4 font-medium">Your Story. Our Creative Obsession.</p>
           </div>
           <div>
             <h4 className="font-semibold text-white mb-4">Quick Links</h4>
             <div className="space-y-2">
-              <Link href="/about" className="block text-amber-100 hover:text-amber-200 transition-colors">
+              <Link href="/about" className="block text-gray-300 hover:text-white transition-colors">
                 About
               </Link>
-              <Link href="/portfolio" className="block text-amber-100 hover:text-amber-200 transition-colors">
+              <Link href="/portfolio" className="block text-gray-300 hover:text-white transition-colors">
                 Portfolio
               </Link>
-              <Link href="/services" className="block text-amber-100 hover:text-amber-200 transition-colors">
+              <Link href="/services" className="block text-gray-300 hover:text-white transition-colors">
                 Services
               </Link>
-              <Link href="/contact" className="block text-amber-100 hover:text-amber-200 transition-colors">
+              <Link href="/contact" className="block text-gray-300 hover:text-white transition-colors">
                 Contact
               </Link>
             </div>
@@ -41,7 +41,7 @@ export default function Footer() {
                   href="https://instagram.com/kaplongcreative"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-amber-100 hover:text-amber-200 transition-colors font-medium"
+                  className="text-gray-300 hover:text-white transition-colors font-medium"
                 >
                   @kaplongcreative
                 </a>
@@ -56,7 +56,7 @@ export default function Footer() {
                   href="https://wa.me/254700000000"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-amber-100 hover:text-amber-200 transition-colors font-medium"
+                  className="text-gray-300 hover:text-white transition-colors font-medium"
                 >
                   +254 700 000 000
                 </a>
@@ -69,7 +69,7 @@ export default function Footer() {
                 </div>
                 <a
                   href="mailto:hello@kaplongcreative.com"
-                  className="text-amber-100 hover:text-amber-200 transition-colors font-medium"
+                  className="text-gray-300 hover:text-white transition-colors font-medium"
                 >
                   hello@kaplongcreative.com
                 </a>
@@ -84,7 +84,7 @@ export default function Footer() {
                   href="https://facebook.com/kaplongcreative"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-amber-100 hover:text-amber-200 transition-colors font-medium"
+                  className="text-gray-300 hover:text-white transition-colors font-medium"
                 >
                   Kaplong Creative
                 </a>
@@ -92,8 +92,8 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="border-t border-amber-700/30 mt-8 pt-8 text-center">
-          <p className="text-amber-200">© 2024 Kaplong Creative Studio. All rights reserved.</p>
+        <div className="border-t border-gray-700 mt-8 pt-8 text-center">
+          <p className="text-gray-400">© 2024 Kaplong Creative Studio. All rights reserved.</p>
         </div>
       </div>
     </footer>

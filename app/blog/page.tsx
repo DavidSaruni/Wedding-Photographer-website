@@ -75,35 +75,35 @@ Remember, the best time for your portraits is when you feel confident, relaxed, 
 
 export default function BlogPage() {
   return (
-    <div className="min-h-screen bg-stone-50">
+    <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-stone-200 z-50">
+      <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-gray-300 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="text-2xl font-serif font-bold text-stone-900">
+            <Link href="/" className="text-2xl font-serif font-bold text-black">
               Kaplong Creative
             </Link>
             <div className="hidden md:flex items-center space-x-8">
-              <Link href="/about" className="text-stone-700 hover:text-stone-900 transition-colors">
+              <Link href="/about" className="text-black hover:text-gray-700 transition-colors">
                 About
               </Link>
-              <Link href="/portfolio" className="text-stone-700 hover:text-stone-900 transition-colors">
+              <Link href="/portfolio" className="text-black hover:text-gray-700 transition-colors">
                 Portfolio
               </Link>
-              <Link href="/services" className="text-stone-700 hover:text-stone-900 transition-colors">
+              <Link href="/services" className="text-black hover:text-gray-700 transition-colors">
                 Services
               </Link>
-              <Link href="/testimonials" className="text-stone-700 hover:text-stone-900 transition-colors">
+              <Link href="/testimonials" className="text-black hover:text-gray-700 transition-colors">
                 Testimonials
               </Link>
-              <Link href="/blog" className="text-stone-700 hover:text-stone-900 transition-colors font-semibold">
+              <Link href="/blog" className="text-black hover:text-gray-700 transition-colors font-semibold">
                 Journal
               </Link>
-              <Link href="/contact" className="text-stone-700 hover:text-stone-900 transition-colors">
+              <Link href="/contact" className="text-black hover:text-gray-700 transition-colors">
                 Contact
               </Link>
             </div>
-            <Button asChild className="bg-stone-900 hover:bg-stone-800">
+            <Button asChild className="bg-black hover:bg-gray-900">
               <Link href="/contact">Book Now</Link>
             </Button>
           </div>
@@ -114,14 +114,14 @@ export default function BlogPage() {
         <div className="max-w-4xl mx-auto px-6">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl lg:text-5xl font-serif font-bold text-stone-900 mb-6">Journal</h1>
-            <p className="text-xl text-stone-600 text-pretty">
+            <h1 className="text-4xl lg:text-5xl font-serif font-bold text-black mb-6">Journal</h1>
+            <p className="text-xl text-gray-700 text-pretty">
               Real wedding stories, behind-the-scenes insights, and faith reflections from our photography journey
             </p>
           </div>
 
           {/* Featured Post */}
-          <Card className="border-stone-200 mb-12">
+          <Card className="border-gray-300 mb-12">
             <div className="grid lg:grid-cols-2 gap-0">
               <div className="relative h-64 lg:h-auto">
                 <Image
@@ -133,13 +133,13 @@ export default function BlogPage() {
               </div>
               <CardContent className="p-8 flex flex-col justify-center">
                 <div className="space-y-4">
-                  <div className="text-sm text-stone-500">{blogPosts[0].date}</div>
-                  <h2 className="text-2xl font-serif font-bold text-stone-900">{blogPosts[0].title}</h2>
-                  <p className="text-stone-600 leading-relaxed">{blogPosts[0].excerpt}</p>
+                  <div className="text-sm text-gray-600">{blogPosts[0].date}</div>
+                  <h2 className="text-2xl font-serif font-bold text-black">{blogPosts[0].title}</h2>
+                  <p className="text-gray-700 leading-relaxed">{blogPosts[0].excerpt}</p>
                   <Button
                     asChild
                     variant="outline"
-                    className="border-stone-300 text-stone-700 hover:bg-stone-100 bg-transparent w-fit"
+                    className="border-gray-300 text-black hover:bg-gray-100 bg-transparent w-fit"
                   >
                     <Link href={`/blog/${blogPosts[0].id}`}>Read More</Link>
                   </Button>
@@ -151,7 +151,7 @@ export default function BlogPage() {
           {/* Blog Posts Grid */}
           <div className="grid md:grid-cols-2 gap-8">
             {blogPosts.slice(1).map((post) => (
-              <Card key={post.id} className="border-stone-200">
+              <Card key={post.id} className="border-gray-300">
                 <div className="relative h-48">
                   <Image
                     src={post.image || "/placeholder.svg"}
@@ -162,14 +162,14 @@ export default function BlogPage() {
                 </div>
                 <CardContent className="p-6">
                   <div className="space-y-3">
-                    <div className="text-sm text-stone-500">{post.date}</div>
-                    <h3 className="text-xl font-serif font-semibold text-stone-900">{post.title}</h3>
-                    <p className="text-stone-600">{post.excerpt}</p>
+                    <div className="text-sm text-gray-600">{post.date}</div>
+                    <h3 className="text-xl font-serif font-semibold text-black">{post.title}</h3>
+                    <p className="text-gray-700">{post.excerpt}</p>
                     <Button
                       asChild
                       variant="outline"
                       size="sm"
-                      className="border-stone-300 text-stone-700 hover:bg-stone-100 bg-transparent"
+                      className="border-gray-300 text-black hover:bg-gray-100 bg-transparent"
                     >
                       <Link href={`/blog/${post.id}`}>Read More</Link>
                     </Button>
@@ -180,18 +180,18 @@ export default function BlogPage() {
           </div>
 
           {/* Newsletter Signup */}
-          <div className="mt-16 bg-stone-900 text-white rounded-lg p-8 text-center">
+          <div className="mt-16 bg-black text-white rounded-lg p-8 text-center">
             <h2 className="text-2xl font-serif font-bold mb-4">Stay Connected</h2>
-            <p className="text-stone-300 mb-6">
+            <p className="text-gray-300 mb-6">
               Get the latest wedding stories, photography tips, and behind-the-scenes insights delivered to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Your email address"
-                className="flex-1 px-4 py-2 rounded-lg text-stone-900"
+                className="flex-1 px-4 py-2 rounded-lg text-black"
               />
-              <Button variant="secondary" className="bg-white text-stone-900 hover:bg-stone-100">
+              <Button variant="secondary" className="bg-white text-black hover:bg-gray-100">
                 Subscribe
               </Button>
             </div>
