@@ -45,21 +45,21 @@ export default function HomePage() {
   }, [carouselImages.length])
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-stone-50 via-amber-50/30 to-stone-100">
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-stone-200/50 shadow-sm">
+    <div className="min-h-screen bg-white">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-gray-700 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-amber-600 to-stone-700 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow">
-              <span className="text-white font-bold text-lg">K</span>
+            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow">
+              <span className="text-black font-bold text-lg">K</span>
             </div>
-            <span className="text-2xl font-serif font-bold bg-gradient-to-r from-amber-700 via-stone-800 to-amber-900 bg-clip-text text-transparent group-hover:scale-105 transition-transform">
+            <span className="text-2xl font-serif font-bold text-white group-hover:scale-105 transition-transform">
               Kaplong Creative
             </span>
           </Link>
           <Button
             asChild
             size="lg"
-            className="bg-gradient-to-r from-amber-700 to-amber-900 hover:from-amber-800 hover:to-stone-900 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-semibold"
+            className="bg-white text-black hover:bg-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 font-semibold"
           >
             <Link href="/contact">Book Your Date</Link>
           </Button>
@@ -69,9 +69,9 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="pt-24 pb-16 relative overflow-hidden min-h-screen flex items-center">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-amber-900/10 via-stone-900/5 to-amber-800/10"></div>
-          <div className="absolute top-20 left-10 w-32 h-32 bg-amber-200/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-40 h-40 bg-stone-300/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/5 via-black/5 to-gray-800/5"></div>
+          <div className="absolute top-20 left-10 w-32 h-32 bg-gray-300/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-40 h-40 bg-gray-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-6 relative">
@@ -80,18 +80,18 @@ export default function HomePage() {
               className={`space-y-8 transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
             >
               <div
-                className={`inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-100 to-green-100 rounded-full text-sm text-emerald-800 mb-4 shadow-lg border border-emerald-200/50 transform transition-all duration-700 delay-300 ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}
+                className={`inline-flex items-center px-6 py-3 bg-black border border-white rounded-full text-sm text-white mb-4 shadow-lg transform transition-all duration-700 delay-300 ${isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}
               >
-                <span className="w-3 h-3 bg-emerald-500 rounded-full mr-3 animate-pulse shadow-lg"></span>
+                <span className="w-3 h-3 bg-white rounded-full mr-3 animate-pulse shadow-lg"></span>
                 <span className="font-semibold">📍 Based in Nakuru • Serving All of Kenya</span>
               </div>
 
               <div className="text-center lg:text-left">
                 <h1 className="text-7xl lg:text-9xl font-serif font-bold mb-6 text-balance">
-                  <span className="bg-gradient-to-br from-amber-700 via-stone-900 to-amber-900 bg-clip-text text-transparent drop-shadow-lg block">
+                  <span className="text-black drop-shadow-lg block">
                     Kaplong
                   </span>
-                  <span className="bg-gradient-to-br from-stone-800 via-amber-800 to-stone-900 bg-clip-text text-transparent drop-shadow-lg block">
+                  <span className="text-black drop-shadow-lg block">
                     Creative
                   </span>
                 </h1>
@@ -99,36 +99,36 @@ export default function HomePage() {
 
               <div className="space-y-6">
                 <h2 className="text-4xl lg:text-5xl font-serif font-bold leading-tight text-balance min-h-[200px]">
-                  <span className="bg-gradient-to-br from-stone-900 via-amber-900 to-stone-800 bg-clip-text text-transparent drop-shadow-sm">
+                  <span className="text-black drop-shadow-sm">
                     {currentText}
                   </span>
-                  <span className="animate-pulse text-amber-600">|</span>
+                  <span className="animate-pulse text-black">|</span>
                 </h2>
 
-                <p className="text-2xl text-stone-700 leading-relaxed font-light">
-                  <span className="font-semibold text-amber-800">Your love deserves more than snapshots.</span> We
+                <p className="text-2xl text-gray-700 leading-relaxed font-light">
+                  <span className="font-semibold text-black">Your love deserves more than snapshots.</span> We
                   capture the tears, the laughter, the stolen glances—every moment that makes your heart skip a beat.
                 </p>
               </div>
 
-              <div className="grid grid-cols-3 gap-6 p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-amber-200/30 shadow-xl">
+              <div className="grid grid-cols-3 gap-6 p-6 bg-black/5 backdrop-blur-sm rounded-2xl border border-gray-300 shadow-xl">
                 <div className="text-center">
-                  <div className="text-4xl font-bold bg-gradient-to-br from-amber-700 to-amber-900 bg-clip-text text-transparent">
+                  <div className="text-4xl font-bold text-black">
                     200+
                   </div>
-                  <div className="text-sm text-stone-600 font-medium">Happy Couples</div>
+                  <div className="text-sm text-gray-700 font-medium">Happy Couples</div>
                 </div>
-                <div className="text-center border-x border-stone-200">
-                  <div className="text-4xl font-bold bg-gradient-to-br from-amber-700 to-amber-900 bg-clip-text text-transparent">
+                <div className="text-center border-x border-gray-300">
+                  <div className="text-4xl font-bold text-black">
                     5★
                   </div>
-                  <div className="text-sm text-stone-600 font-medium">Average Rating</div>
+                  <div className="text-sm text-gray-700 font-medium">Average Rating</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold bg-gradient-to-br from-amber-700 to-amber-900 bg-clip-text text-transparent">
+                  <div className="text-4xl font-bold text-black">
                     48hr
                   </div>
-                  <div className="text-sm text-stone-600 font-medium">Sneak Peek</div>
+                  <div className="text-sm text-gray-700 font-medium">Sneak Peek</div>
                 </div>
               </div>
 
@@ -138,7 +138,7 @@ export default function HomePage() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-gradient-to-r from-amber-700 via-amber-800 to-stone-800 hover:from-amber-800 hover:via-amber-900 hover:to-stone-900 text-xl px-12 py-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-110 font-bold"
+                  className="bg-black text-white hover:bg-gray-900 text-xl px-12 py-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-110 font-bold"
                 >
                   <Link href="/contact">📅 Check Your Date</Link>
                 </Button>
@@ -146,7 +146,7 @@ export default function HomePage() {
                   asChild
                   variant="outline"
                   size="lg"
-                  className="border-2 border-amber-300 text-amber-800 hover:bg-amber-50 bg-white/90 backdrop-blur-sm text-xl px-12 py-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-110 font-bold"
+                  className="border-2 border-black text-black hover:bg-gray-100 bg-white text-xl px-12 py-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-110 font-bold"
                 >
                   <Link href="/portfolio">✨ See Real Weddings</Link>
                 </Button>
@@ -156,10 +156,10 @@ export default function HomePage() {
             <div
               className={`relative transform transition-all duration-1000 delay-300 ${isVisible ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"}`}
             >
-              <div className="absolute -inset-6 bg-gradient-to-br from-amber-300/30 via-stone-300/20 to-amber-400/30 rounded-3xl opacity-60 blur-2xl animate-pulse"></div>
+              <div className="absolute -inset-6 bg-gradient-to-br from-gray-300/30 via-gray-200/20 to-gray-400/30 rounded-3xl opacity-60 blur-2xl animate-pulse"></div>
               <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-200/20 to-stone-300/20 rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
-                <div className="relative w-full h-[800px] rounded-3xl overflow-hidden shadow-2xl group-hover:shadow-3xl transition-all duration-500 transform group-hover:scale-[1.02] border-4 border-white/50">
+                <div className="absolute inset-0 bg-gradient-to-br from-gray-200/20 to-gray-300/20 rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
+                <div className="relative w-full h-[800px] rounded-3xl overflow-hidden shadow-2xl group-hover:shadow-3xl transition-all duration-500 transform group-hover:scale-[1.02] border-4 border-black/50">
                   {carouselImages.map((image, index) => (
                     <div
                       key={index}
@@ -186,41 +186,41 @@ export default function HomePage() {
       </section>
 
       {/* Trusted by couples across Kenya */}
-      <section className="py-12 bg-white/80 backdrop-blur-sm border-y border-stone-200/50">
+      <section className="py-12 bg-gray-50 backdrop-blur-sm border-y border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-8">
-            <p className="text-sm text-amber-700 uppercase tracking-wider mb-4 font-semibold">
+            <p className="text-sm text-black uppercase tracking-wider mb-4 font-semibold">
               Trusted by couples across Kenya
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
             <div className="text-center group hover:scale-105 transition-transform duration-300">
-              <div className="text-2xl font-bold bg-gradient-to-r from-amber-700 to-amber-800 bg-clip-text text-transparent">
+              <div className="text-2xl font-bold text-black">
                 200+
               </div>
-              <div className="text-sm text-stone-600 group-hover:text-amber-700 transition-colors">
+              <div className="text-sm text-gray-700 group-hover:text-black transition-colors">
                 Weddings Captured
               </div>
             </div>
             <div className="text-center group hover:scale-105 transition-transform duration-300">
-              <div className="text-2xl font-bold bg-gradient-to-r from-amber-700 to-amber-800 bg-clip-text text-transparent">
+              <div className="text-2xl font-bold text-black">
                 98%
               </div>
-              <div className="text-sm text-stone-600 group-hover:text-amber-700 transition-colors">
+              <div className="text-sm text-gray-700 group-hover:text-black transition-colors">
                 Client Satisfaction
               </div>
             </div>
             <div className="text-center group hover:scale-105 transition-transform duration-300">
-              <div className="text-2xl font-bold bg-gradient-to-r from-amber-700 to-amber-800 bg-clip-text text-transparent">
+              <div className="text-2xl font-bold text-black">
                 15+
               </div>
-              <div className="text-sm text-stone-600 group-hover:text-amber-700 transition-colors">Counties Served</div>
+              <div className="text-sm text-gray-700 group-hover:text-black transition-colors">Counties Served</div>
             </div>
             <div className="text-center group hover:scale-105 transition-transform duration-300">
-              <div className="text-2xl font-bold bg-gradient-to-r from-amber-700 to-amber-800 bg-clip-text text-transparent">
+              <div className="text-2xl font-bold text-black">
                 5+
               </div>
-              <div className="text-sm text-stone-600 group-hover:text-amber-700 transition-colors">
+              <div className="text-sm text-gray-700 group-hover:text-black transition-colors">
                 Years Experience
               </div>
             </div>
@@ -229,58 +229,58 @@ export default function HomePage() {
       </section>
 
       {/* Complete Wedding Coverage */}
-      <section className="py-20 bg-gradient-to-br from-stone-50 via-amber-50/20 to-stone-100">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-bold bg-gradient-to-r from-stone-900 to-amber-800 bg-clip-text text-transparent mb-6">
+            <h2 className="text-4xl font-serif font-bold text-black mb-6">
               Complete Wedding Coverage
             </h2>
-            <p className="text-xl text-stone-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
               From intimate ceremonies to grand celebrations, we provide comprehensive documentation that tells your
               unique love story with artistic excellence.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="border-amber-200/50 hover:shadow-xl hover:border-amber-300 transition-all duration-300 transform hover:scale-105 bg-white/80 backdrop-blur-sm">
+            <Card className="border-black hover:shadow-xl transition-all duration-300 transform hover:scale-105 bg-white">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-amber-100 to-stone-100 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                   <span className="text-2xl">📸</span>
                 </div>
-                <h3 className="text-xl font-serif font-semibold text-stone-900 mb-4">Photography</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">
+                <h3 className="text-xl font-serif font-semibold text-black mb-4">Photography</h3>
+                <p className="text-gray-700 text-sm leading-relaxed">
                   Candid moments and editorial portraits that capture the essence of your celebration
                 </p>
               </CardContent>
             </Card>
-            <Card className="border-amber-200/50 hover:shadow-xl hover:border-amber-300 transition-all duration-300 transform hover:scale-105 bg-white/80 backdrop-blur-sm">
+            <Card className="border-black hover:shadow-xl transition-all duration-300 transform hover:scale-105 bg-white">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-amber-100 to-stone-100 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                   <span className="text-2xl">🎥</span>
                 </div>
-                <h3 className="text-xl font-serif font-semibold text-stone-900 mb-4">Videography</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">
+                <h3 className="text-xl font-serif font-semibold text-black mb-4">Videography</h3>
+                <p className="text-gray-700 text-sm leading-relaxed">
                   Cinematic films that bring your wedding day emotions back to life
                 </p>
               </CardContent>
             </Card>
-            <Card className="border-amber-200/50 hover:shadow-xl hover:border-amber-300 transition-all duration-300 transform hover:scale-105 bg-white/80 backdrop-blur-sm">
+            <Card className="border-black hover:shadow-xl transition-all duration-300 transform hover:scale-105 bg-white">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-amber-100 to-stone-100 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                   <span className="text-2xl">🚁</span>
                 </div>
-                <h3 className="text-xl font-serif font-semibold text-stone-900 mb-4">Drone Coverage</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">
+                <h3 className="text-xl font-serif font-semibold text-black mb-4">Drone Coverage</h3>
+                <p className="text-gray-700 text-sm leading-relaxed">
                   Breathtaking aerial perspectives that showcase your venue's beauty
                 </p>
               </CardContent>
             </Card>
-            <Card className="border-amber-200/50 hover:shadow-xl hover:border-amber-300 transition-all duration-300 transform hover:scale-105 bg-white/80 backdrop-blur-sm">
+            <Card className="border-black hover:shadow-xl transition-all duration-300 transform hover:scale-105 bg-white">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-amber-100 to-stone-100 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
                   <span className="text-2xl">✨</span>
                 </div>
-                <h3 className="text-xl font-serif font-semibold text-stone-900 mb-4">Content Creation</h3>
-                <p className="text-stone-600 text-sm leading-relaxed">
+                <h3 className="text-xl font-serif font-semibold text-black mb-4">Content Creation</h3>
+                <p className="text-gray-700 text-sm leading-relaxed">
                   Social media ready content to share your joy with the world
                 </p>
               </CardContent>
@@ -293,32 +293,32 @@ export default function HomePage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-serif font-bold text-stone-900 mb-4">Our Edge</h2>
-            <p className="text-lg text-stone-600 max-w-3xl mx-auto mb-8">
+            <h2 className="text-3xl font-serif font-bold text-black mb-4">Our Edge</h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
               We are a collective of creatives capturing weddings with a fresh perspective and editorial feel. Whether
               it's an intimate ceremony or a grand destination wedding, we document love with clarity, energy, and
               intention.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-stone-200">
+            <Card className="border-gray-300">
               <CardContent className="p-8 text-center">
-                <h3 className="text-xl font-serif font-semibold text-stone-900 mb-4">Candid. Clean. Cinematic.</h3>
-                <p className="text-stone-600">
+                <h3 className="text-xl font-serif font-semibold text-black mb-4">Candid. Clean. Cinematic.</h3>
+                <p className="text-gray-700">
                   Our signature style that captures authentic moments with artistic precision
                 </p>
               </CardContent>
             </Card>
-            <Card className="border-stone-200">
+            <Card className="border-gray-300">
               <CardContent className="p-8 text-center">
-                <h3 className="text-xl font-serif font-semibold text-stone-900 mb-4">Team of Specialists</h3>
-                <p className="text-stone-600">Photographers, Videographers, Drone Pilots working in perfect harmony</p>
+                <h3 className="text-xl font-serif font-semibold text-black mb-4">Team of Specialists</h3>
+                <p className="text-gray-700">Photographers, Videographers, Drone Pilots working in perfect harmony</p>
               </CardContent>
             </Card>
-            <Card className="border-stone-200">
+            <Card className="border-gray-300">
               <CardContent className="p-8 text-center">
-                <h3 className="text-xl font-serif font-semibold text-stone-900 mb-4">Driven by Excellence</h3>
-                <p className="text-stone-600">
+                <h3 className="text-xl font-serif font-semibold text-black mb-4">Driven by Excellence</h3>
+                <p className="text-gray-700">
                   Guided by purpose, delivered with efficiency - faith at the center of everything
                 </p>
               </CardContent>
@@ -328,13 +328,13 @@ export default function HomePage() {
       </section>
 
       {/* Portfolio Preview */}
-      <section className="py-16 bg-stone-50">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-serif font-bold bg-gradient-to-r from-stone-900 to-amber-800 bg-clip-text text-transparent mb-4">
+            <h2 className="text-3xl font-serif font-bold text-black mb-4">
               Signature Work
             </h2>
-            <p className="text-lg text-stone-700">A glimpse into our recent celebrations</p>
+            <p className="text-lg text-gray-700">A glimpse into our recent celebrations</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             <div className="aspect-square relative overflow-hidden rounded-lg group">
