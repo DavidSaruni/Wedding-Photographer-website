@@ -38,12 +38,12 @@ export default function Footer() {
                   </svg>
                 </div>
                 <a
-                  href="https://instagram.com/kaplongcreative"
+                  href="https://www.instagram.com/_kaplong/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white transition-colors font-medium"
                 >
-                  @kaplongcreative
+                  Instagram
                 </a>
               </div>
               <div className="flex items-center space-x-3">
@@ -53,12 +53,12 @@ export default function Footer() {
                   </svg>
                 </div>
                 <a
-                  href="https://wa.me/254700000000"
+                  href="https://wa.me/254796431935"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white transition-colors font-medium"
                 >
-                  +254 700 000 000
+                  +254 796 431 935
                 </a>
               </div>
               <div className="flex items-center space-x-3">
@@ -68,10 +68,10 @@ export default function Footer() {
                   </svg>
                 </div>
                 <a
-                  href="mailto:hello@kaplongcreative.com"
+                  href="mailto:info@kaplogcreativee.com"
                   className="text-gray-300 hover:text-white transition-colors font-medium"
                 >
-                  hello@kaplongcreative.com
+                  info@kaplogcreativee.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
@@ -81,12 +81,12 @@ export default function Footer() {
                   </svg>
                 </div>
                 <a
-                  href="https://facebook.com/kaplongcreative"
+                  href="https://www.facebook.com/KaplongPhotography"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white transition-colors font-medium"
                 >
-                  Kaplong Creative
+                  Facebook
                 </a>
               </div>
             </div>
