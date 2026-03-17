@@ -2,28 +2,28 @@ import Link from "next/link"
 
 export default function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-stone-800 via-amber-900 to-stone-900 text-white py-12">
+    <footer className="bg-black text-white py-12">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-serif font-bold bg-gradient-to-r from-amber-200 to-white bg-clip-text text-transparent mb-4">
+            <h3 className="text-xl font-serif font-bold text-white mb-4">
               Kaplong Creative
             </h3>
-            <p className="text-amber-100 mb-4 font-medium">Your Story. Our Creative Obsession.</p>
+            <p className="text-gray-300 mb-4 font-medium">Your Story. Our Creative Obsession.</p>
           </div>
           <div>
             <h4 className="font-semibold text-white mb-4">Quick Links</h4>
             <div className="space-y-2">
-              <Link href="/about" className="block text-amber-100 hover:text-amber-200 transition-colors">
+              <Link href="/about" className="block text-gray-300 hover:text-white transition-colors">
                 About
               </Link>
-              <Link href="/portfolio" className="block text-amber-100 hover:text-amber-200 transition-colors">
+              <Link href="/portfolio" className="block text-gray-300 hover:text-white transition-colors">
                 Portfolio
               </Link>
-              <Link href="/services" className="block text-amber-100 hover:text-amber-200 transition-colors">
+              <Link href="/services" className="block text-gray-300 hover:text-white transition-colors">
                 Services
               </Link>
-              <Link href="/contact" className="block text-amber-100 hover:text-amber-200 transition-colors">
+              <Link href="/contact" className="block text-gray-300 hover:text-white transition-colors">
                 Contact
               </Link>
             </div>
@@ -38,12 +38,12 @@ export default function Footer() {
                   </svg>
                 </div>
                 <a
-                  href="https://instagram.com/kaplongcreative"
+                  href="https://www.instagram.com/_kaplong/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-amber-100 hover:text-amber-200 transition-colors font-medium"
+                  className="text-gray-300 hover:text-white transition-colors font-medium"
                 >
-                  @kaplongcreative
+                  _kaplong
                 </a>
               </div>
               <div className="flex items-center space-x-3">
@@ -53,25 +53,26 @@ export default function Footer() {
                   </svg>
                 </div>
                 <a
-                  href="https://wa.me/254700000000"
+                  href="https://wa.me/254796431935"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-amber-100 hover:text-amber-200 transition-colors font-medium"
+                  className="text-gray-300 hover:text-white transition-colors font-medium"
                 >
-                  +254 700 000 000
+                  +254 796 431 935
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-red-600 rounded-lg flex items-center justify-center">
                   <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <path d="M22.6 6.6L12 13.2 1.4 6.6" fill="none" stroke="white" strokeWidth="1.5" />
                   </svg>
                 </div>
                 <a
-                  href="mailto:hello@kaplongcreative.com"
-                  className="text-amber-100 hover:text-amber-200 transition-colors font-medium"
+                  href="mailto:info@kaplogcreativee.com"
+                  className="text-gray-300 hover:text-white transition-colors font-medium"
                 >
-                  hello@kaplongcreative.com
+                  info@kaplogcreativee.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
@@ -81,19 +82,19 @@ export default function Footer() {
                   </svg>
                 </div>
                 <a
-                  href="https://facebook.com/kaplongcreative"
+                  href="https://www.facebook.com/KaplongPhotography"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-amber-100 hover:text-amber-200 transition-colors font-medium"
+                  className="text-gray-300 hover:text-white transition-colors font-medium"
                 >
-                  Kaplong Creative
+                  Kaplong Photography
                 </a>
               </div>
             </div>
           </div>
         </div>
-        <div className="border-t border-amber-700/30 mt-8 pt-8 text-center">
-          <p className="text-amber-200">© 2024 Kaplong Creative Studio. All rights reserved.</p>
+        <div className="border-t border-gray-700 mt-8 pt-8 text-center">
+          <p className="text-gray-400">© 2024 Kaplong Creative Studio. All rights reserved.</p>
         </div>
       </div>
     </footer>

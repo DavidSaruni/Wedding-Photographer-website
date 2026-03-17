@@ -136,7 +136,7 @@ export default function PortfolioPage() {
     activeCategory === "All" ? portfolioImages : portfolioImages.filter((img) => img.category === activeCategory)
 
   return (
-    <div className="min-h-screen bg-stone-50">
+    <div className="min-h-screen bg-white">
       {/* Navigation */}
       <Navigation />
 
@@ -144,10 +144,10 @@ export default function PortfolioPage() {
         <div className="max-w-7xl mx-auto px-6">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="text-4xl lg:text-5xl font-serif font-bold bg-gradient-to-r from-amber-800 via-stone-800 to-amber-900 bg-clip-text text-transparent mb-6">
+            <h1 className="text-4xl lg:text-5xl font-serif font-bold text-black mb-6">
               Our Portfolio
             </h1>
-            <p className="text-xl text-stone-700 max-w-2xl mx-auto text-pretty">
+            <p className="text-xl text-gray-700 max-w-2xl mx-auto text-pretty">
               A collection of moments captured with intention, artistry, and heart across weddings, retreats, nature,
               and corporate events
             </p>
@@ -161,8 +161,8 @@ export default function PortfolioPage() {
                 onClick={() => setActiveCategory(category)}
                 className={`px-6 py-2 rounded-full transition-colors ${
                   activeCategory === category
-                    ? "bg-stone-900 text-white"
-                    : "bg-white text-stone-700 hover:bg-stone-100 border border-stone-200"
+                    ? "bg-black text-white"
+                    : "bg-white text-black hover:bg-gray-100 border border-gray-300"
                 }`}
               >
                 {category}
@@ -184,7 +184,7 @@ export default function PortfolioPage() {
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-end">
                     <div className="p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <p className="font-medium">{image.title}</p>
-                      <p className="text-sm text-amber-200">{image.category}</p>
+                      <p className="text-sm text-gray-200">{image.category}</p>
                     </div>
                   </div>
                 </div>
@@ -193,18 +193,18 @@ export default function PortfolioPage() {
           </div>
 
           {/* CTA Section */}
-          <div className="text-center bg-gradient-to-br from-white to-stone-50 rounded-lg p-12 border border-stone-100">
-            <h2 className="text-3xl font-serif font-bold bg-gradient-to-r from-amber-800 to-stone-800 bg-clip-text text-transparent mb-4">
+          <div className="text-center bg-gray-50 rounded-lg p-12 border border-gray-300">
+            <h2 className="text-3xl font-serif font-bold text-black mb-4">
               Ready to create your own story?
             </h2>
-            <p className="text-lg text-stone-700 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
               Let's discuss how we can capture the magic of your special day with the same artistry and attention to
               detail.
             </p>
             <Button
               asChild
               size="lg"
-              className="bg-gradient-to-r from-amber-800 to-stone-800 hover:from-amber-900 hover:to-stone-900 text-white shadow-lg"
+              className="bg-black hover:bg-gray-900 text-white shadow-lg"
             >
               <Link href="/contact">Start Planning</Link>
             </Button>

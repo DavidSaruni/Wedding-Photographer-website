@@ -60,7 +60,7 @@ const faqs = [
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen bg-stone-50">
+    <div className="min-h-screen bg-white">
       {/* Navigation */}
       <Navigation />
 
@@ -74,12 +74,12 @@ export default function ServicesPage() {
               fill
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-stone-900/90 via-stone-900/70 to-transparent flex items-center">
+            <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-transparent flex items-center">
               <div className="px-12 max-w-3xl">
                 <h1 className="text-4xl lg:text-5xl font-serif font-bold text-white mb-6 text-balance">
                   Everything You Need to Remember Your Day — Beautifully
                 </h1>
-                <p className="text-xl text-amber-100 leading-relaxed">
+                <p className="text-xl text-gray-100 leading-relaxed">
                   From intimate ceremonies to grand celebrations, we offer comprehensive wedding documentation services
                   tailored to your vision.
                 </p>
@@ -89,10 +89,10 @@ export default function ServicesPage() {
 
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl lg:text-5xl font-serif font-bold text-stone-900 mb-6">
+            <h1 className="text-4xl lg:text-5xl font-serif font-bold text-black mb-6">
               Everything You Need to Remember Your Day — Beautifully
             </h1>
-            <p className="text-xl text-stone-600 max-w-3xl mx-auto text-pretty">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto text-pretty">
               From intimate ceremonies to grand celebrations, we offer comprehensive wedding documentation services
               tailored to your vision.
             </p>
@@ -118,10 +118,10 @@ export default function ServicesPage() {
                 description: "Vertical reels and TikTok-ready content for social sharing",
               },
             ].map((service, index) => (
-              <Card key={index} className="border-stone-200">
+              <Card key={index} className="border-gray-300">
                 <CardContent className="p-6 text-center">
-                  <h3 className="font-serif font-semibold text-stone-900 mb-2">{service.title}</h3>
-                  <p className="text-stone-600 text-sm">{service.description}</p>
+                  <h3 className="font-serif font-semibold text-black mb-2">{service.title}</h3>
+                  <p className="text-gray-700 text-sm">{service.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -129,31 +129,31 @@ export default function ServicesPage() {
 
           {/* Packages */}
           <div className="mb-16">
-            <h2 className="text-3xl font-serif font-bold text-stone-900 text-center mb-12">Wedding Packages</h2>
+            <h2 className="text-3xl font-serif font-bold text-black text-center mb-12">Wedding Packages</h2>
             <div className="grid lg:grid-cols-3 gap-8">
               {packages.map((pkg, index) => (
-                <Card key={index} className={`border-stone-200 relative ${pkg.popular ? "ring-2 ring-stone-900" : ""}`}>
+                <Card key={index} className={`border-gray-300 relative ${pkg.popular ? "ring-2 ring-black" : ""}`}>
                   {pkg.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-stone-900 text-white px-4 py-1 rounded-full text-sm font-medium">
+                      <span className="bg-black text-white px-4 py-1 rounded-full text-sm font-medium">
                         Most Popular
                       </span>
                     </div>
                   )}
                   <CardHeader className="text-center">
-                    <CardTitle className="font-serif text-2xl text-stone-900">{pkg.name}</CardTitle>
-                    <p className="text-stone-600 font-medium">{pkg.price}</p>
+                    <CardTitle className="font-serif text-2xl text-black">{pkg.name}</CardTitle>
+                    <p className="text-gray-700 font-medium">{pkg.price}</p>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <ul className="space-y-3">
                       {pkg.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center gap-3">
                           <Check className="w-5 h-5 text-green-600 flex-shrink-0" />
-                          <span className="text-stone-700">{feature}</span>
+                          <span className="text-gray-700">{feature}</span>
                         </li>
                       ))}
                     </ul>
-                    <Button asChild className="w-full bg-stone-900 hover:bg-stone-800">
+                    <Button asChild className="w-full bg-black hover:bg-gray-900">
                       <Link href="/contact">Choose Package</Link>
                     </Button>
                   </CardContent>
@@ -161,11 +161,11 @@ export default function ServicesPage() {
               ))}
             </div>
             <div className="text-center mt-8">
-              <p className="text-stone-600 mb-4">Need something custom?</p>
+              <p className="text-gray-700 mb-4">Need something custom?</p>
               <Button
                 asChild
                 variant="outline"
-                className="border-stone-300 text-stone-700 hover:bg-stone-100 bg-transparent"
+                className="border-gray-300 text-black hover:bg-gray-100 bg-transparent"
               >
                 <Link href="/contact">Let's build your dream package</Link>
               </Button>
@@ -173,15 +173,15 @@ export default function ServicesPage() {
           </div>
 
           {/* FAQs */}
-          <div className="bg-white rounded-lg p-8">
-            <h2 className="text-3xl font-serif font-bold text-stone-900 text-center mb-12">
+          <div className="bg-gray-50 rounded-lg p-8">
+            <h2 className="text-3xl font-serif font-bold text-black text-center mb-12">
               Frequently Asked Questions
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               {faqs.map((faq, index) => (
                 <div key={index} className="space-y-2">
-                  <h3 className="font-semibold text-stone-900">{faq.question}</h3>
-                  <p className="text-stone-600">{faq.answer}</p>
+                  <h3 className="font-semibold text-black">{faq.question}</h3>
+                  <p className="text-gray-700">{faq.answer}</p>
                 </div>
               ))}
             </div>
