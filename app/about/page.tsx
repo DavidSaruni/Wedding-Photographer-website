@@ -69,7 +69,7 @@ export default function AboutPage() {
             <div className="grid lg:grid-cols-3 gap-10">
               <div className="lg:col-span-1 flex flex-col items-center text-center">
                 <Image
-                  src="/portrait-of-photographer-kaplong-with-camera.jpg"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/jimmy%20mburu-K22E2qCMXpkSWmuGexfKCYTZTULCDc.jpeg"
                   alt="Kaplong, Lead Photographer"
                   width={280}
                   height={350}
