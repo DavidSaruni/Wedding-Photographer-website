@@ -39,8 +39,8 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
             <div className="relative order-2 lg:order-1">
               <Image
-                src="/photographer-with-camera-at-wedding-behind-the-sce.jpg"
-                alt="Kaplong Creative team at work"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jimmy%20Kaplong-j2rB3FwyBaN35s1X5X6MQp77ihFEB4.jpeg"
+                alt="Jimmy Kaplong, Lead Photographer"
                 width={500}
                 height={600}
                 className="rounded-2xl shadow-2xl"
