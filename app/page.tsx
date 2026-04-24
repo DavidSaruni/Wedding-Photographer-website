@@ -48,11 +48,15 @@ export default function HomePage() {
     <div className="min-h-screen bg-white">
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-gray-700 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow">
-              <span className="text-black font-bold text-lg">K</span>
-            </div>
-            <span className="text-2xl font-serif font-bold text-white group-hover:scale-105 transition-transform">
+          <Link href="/" className="flex items-center space-x-3 group hover:opacity-80 transition-opacity">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Kaplong-YYPGU4uKU41I7CFhT1Rywj7uMClDxm.png"
+              alt="Kaplong Creative Logo"
+              width={44}
+              height={44}
+              className="rounded-full shadow-lg"
+            />
+            <span className="hidden sm:inline text-2xl font-serif font-bold text-white group-hover:text-gray-200 transition-colors">
               Kaplong Creative
             </span>
           </Link>

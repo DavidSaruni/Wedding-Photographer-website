@@ -5,6 +5,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
+import Image from "next/image"
 
 export function Navigation() {
   const pathname = usePathname()
@@ -41,14 +42,17 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link
-            href="/"
-            className="group relative text-2xl lg:text-3xl font-serif font-bold transition-all duration-300"
-          >
-            <span className="text-black group-hover:text-gray-800 transition-all duration-300">
+          <Link href="/" className="group flex items-center space-x-2 hover:opacity-80 transition-opacity duration-300">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Kaplong-YYPGU4uKU41I7CFhT1Rywj7uMClDxm.png"
+              alt="Kaplong Creative Logo"
+              width={48}
+              height={48}
+              className="rounded-full shadow-lg"
+            />
+            <span className="hidden sm:inline text-lg font-serif font-bold text-black group-hover:text-gray-800 transition-all duration-300">
               Kaplong Creative
             </span>
-            <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black group-hover:w-full transition-all duration-500"></div>
           </Link>
 
           {/* Desktop Navigation */}
