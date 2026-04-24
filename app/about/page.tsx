@@ -39,8 +39,8 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
             <div className="relative order-2 lg:order-1">
               <Image
-                src="/photographer-with-camera-at-wedding-behind-the-sce.jpg"
-                alt="Kaplong Creative team at work"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Jimmy%20Kaplong-j2rB3FwyBaN35s1X5X6MQp77ihFEB4.jpeg"
+                alt="Jimmy Kaplong, Lead Photographer"
                 width={500}
                 height={600}
                 className="rounded-2xl shadow-2xl"
@@ -69,7 +69,7 @@ export default function AboutPage() {
             <div className="grid lg:grid-cols-3 gap-10">
               <div className="lg:col-span-1 flex flex-col items-center text-center">
                 <Image
-                  src="/portrait-of-photographer-kaplong-with-camera.jpg"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/jimmy%20mburu-K22E2qCMXpkSWmuGexfKCYTZTULCDc.jpeg"
                   alt="Kaplong, Lead Photographer"
                   width={280}
                   height={350}

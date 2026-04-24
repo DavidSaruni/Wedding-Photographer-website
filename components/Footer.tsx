@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Footer() {
   return (
@@ -6,9 +7,15 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-serif font-bold text-white mb-4">
-              Kaplong Creative
-            </h3>
+            <Link href="/" className="inline-block mb-4 hover:opacity-80 transition-opacity">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Kaplong-YYPGU4uKU41I7CFhT1Rywj7uMClDxm.png"
+                alt="Kaplong Creative Logo"
+                width={60}
+                height={60}
+                className="rounded-full shadow-lg"
+              />
+            </Link>
             <p className="text-gray-300 mb-4 font-medium">Your Story. Our Creative Obsession.</p>
           </div>
           <div>
