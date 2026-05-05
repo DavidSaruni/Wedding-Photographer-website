@@ -1,191 +1,240 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Checkbox } from "@/components/ui/checkbox"
-import { Phone, Mail, MessageCircle, Instagram } from "lucide-react"
+import { Mail, Phone, Clock } from "lucide-react"
 import Image from "next/image"
 import { Navigation } from "@/components/Navigation"
+import { useState } from "react"
 
 export default function ContactPage() {
+  const [selectedDate, setSelectedDate] = useState<string | null>(null)
+  const [selectedTime, setSelectedTime] = useState<string | null>(null)
+
+  const timeSlots = [
+    "08:00 AM",
+    "09:00 AM",
+    "10:00 AM",
+    "11:00 AM",
+    "12:00 PM",
+    "01:00 PM",
+    "02:00 PM",
+    "03:00 PM",
+    "04:00 PM",
+    "05:00 PM",
+  ]
+
+  const getDaysInMonth = (date: Date) => {
+    return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate()
+  }
+
+  const getFirstDayOfMonth = (date: Date) => {
+    return new Date(date.getFullYear(), date.getMonth(), 1).getDay()
+  }
+
+  const currentDate = new Date()
+  const daysInMonth = getDaysInMonth(currentDate)
+  const firstDay = getFirstDayOfMonth(currentDate)
+  const days = Array.from({ length: daysInMonth }, (_, i) => i + 1)
+  const emptyDays = Array.from({ length: firstDay }, (_, i) => null)
+
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen" style={{ backgroundColor: "#f5f1ed" }}>
       {/* Navigation */}
       <Navigation />
 
-      <div className="pt-24 pb-16">
-        <div className="max-w-6xl mx-auto px-6">
-          {/* Hero Image Section */}
-          <div className="relative h-[300px] rounded-3xl overflow-hidden mb-12 shadow-2xl">
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/JIM_5974-aj9zCmAMde1I0aBluyhghD6hSoSaiH.jpg"
-              alt="Contact Kaplong Creative"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30 flex items-center justify-center">
-              <div className="text-center px-6">
-                <h1 className="text-4xl lg:text-5xl font-serif font-bold text-white mb-6 text-balance">
-                  Let's Create Magic Together
-                </h1>
-                <p className="text-xl text-gray-100 max-w-2xl mx-auto">
-                  Ready to capture your love story? We'll get back within 24 hours. Your love story deserves to be told
-                  beautifully.
-                </p>
+      <div className="pt-32 pb-20">
+        <div className="max-w-4xl mx-auto px-6">
+          {/* Hero Section */}
+          <div className="text-center mb-16">
+            <h1 className="text-5xl lg:text-6xl font-serif font-bold text-black mb-4 text-balance">
+              Your Story is Too Good
+            </h1>
+            <h2 className="text-5xl lg:text-6xl font-serif font-light text-black mb-8 text-balance">
+              Not to be Captured
+            </h2>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-gray-700">
+              <div>
+                <p className="font-medium">Email hello@kaplongcreative.com</p>
+                <p>Telephone +254 796 431 935</p>
+              </div>
+              <div className="text-2xl text-gray-500">&</div>
+              <div>
+                <p className="font-medium">Hours: Monday – Friday</p>
+                <p>9:00am – 5:00pm EAT</p>
               </div>
             </div>
           </div>
 
-          {/* Header */}
-          <div className="text-center mb-16">
-            {/* Updated header text color and gradient background */}
-            <h1 className="text-4xl lg:text-5xl font-serif font-bold text-black mb-6 text-balance">
-              Let's Create Magic Together
-            </h1>
-            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
-              Ready to capture your love story? We'll get back within 24 hours. Your love story deserves to be told
-              beautifully.
-            </p>
+          {/* Featured Image */}
+          <div className="relative h-64 mb-16 rounded-lg overflow-hidden">
+            <Image
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/JIM_5974-aj9zCmAMde1I0aBluyhghD6hSoSaiH.jpg"
+              alt="Wedding Photography"
+              fill
+              className="object-cover"
+            />
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-12">
-            {/* Contact Form */}
-            <div className="lg:col-span-2">
-              <Card className="border-gray-300">
-                <CardHeader>
-                  <CardTitle className="font-serif text-2xl text-black">Tell Us About Your Day</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Name *</Label>
-                      <Input id="name" placeholder="Your full name" className="border-gray-300" />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Email *</Label>
-                      <Input id="email" type="email" placeholder="your@email.com" className="border-gray-300" />
-                    </div>
-                  </div>
+          {/* Contact Form */}
+          <div className="max-w-2xl mx-auto space-y-8">
+            {/* Personal Information */}
+            <div className="space-y-6">
+              <div>
+                <Label className="font-medium text-gray-800 text-sm">Your Name *</Label>
+                <Input
+                  placeholder="Your and Your Love's Names"
+                  className="mt-2 border-0 border-b-2 border-gray-400 bg-transparent px-0 py-2 text-gray-900 placeholder-gray-500 focus:border-gray-600 focus:ring-0"
+                />
+              </div>
 
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="phone">Phone Number</Label>
-                      <Input id="phone" placeholder="+254 700 000 000" className="border-gray-300" />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="date">Wedding Date</Label>
-                      <Input id="date" type="date" className="border-gray-300" />
-                    </div>
-                  </div>
+              <div>
+                <Label className="font-medium text-gray-800 text-sm">Email Address *</Label>
+                <Input
+                  type="email"
+                  placeholder="Your Email"
+                  className="mt-2 border-0 border-b-2 border-gray-400 bg-transparent px-0 py-2 text-gray-900 placeholder-gray-500 focus:border-gray-600 focus:ring-0"
+                />
+              </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="venue">Venue/Location</Label>
-                    <Input
-                      id="venue"
-                      placeholder="Where will your celebration take place?"
-                      className="border-gray-300"
-                    />
-                  </div>
+              <div>
+                <Label className="font-medium text-gray-800 text-sm">Phone Number</Label>
+                <Input
+                  placeholder="Your Phone Number"
+                  className="mt-2 border-0 border-b-2 border-gray-400 bg-transparent px-0 py-2 text-gray-900 placeholder-gray-500 focus:border-gray-600 focus:ring-0"
+                />
+              </div>
 
-                  <div className="space-y-3">
-                    <Label>Services Interested In</Label>
-                    <div className="grid md:grid-cols-2 gap-3">
-                      {[
-                        "Photography",
-                        "Videography",
-                        "Drone Coverage",
-                        "Content Creation",
-                        "Same-Day Edits",
-                        "Wedding Album",
-                      ].map((service) => (
-                        <div key={service} className="flex items-center space-x-2">
-                          <Checkbox id={service.toLowerCase().replace(" ", "-")} />
-                          <Label htmlFor={service.toLowerCase().replace(" ", "-")} className="text-sm font-normal">
-                            {service}
-                          </Label>
-                        </div>
+              <div>
+                <Label className="font-medium text-gray-800 text-sm">What service are you inquiring about? *</Label>
+                <select className="mt-2 w-full border-0 border-b-2 border-gray-400 bg-transparent px-0 py-2 text-gray-900 placeholder-gray-500 focus:border-gray-600 focus:outline-none">
+                  <option value="">Select a service</option>
+                  <option value="photography">Wedding Photography</option>
+                  <option value="videography">Videography</option>
+                  <option value="both">Photography & Videography</option>
+                </select>
+              </div>
+
+              <div>
+                <Label className="font-medium text-gray-800 text-sm">Wedding Date</Label>
+                <Input
+                  type="date"
+                  className="mt-2 border-0 border-b-2 border-gray-400 bg-transparent px-0 py-2 text-gray-900 placeholder-gray-500 focus:border-gray-600 focus:ring-0"
+                />
+              </div>
+
+              <div>
+                <Label className="font-medium text-gray-800 text-sm">Wedding Location</Label>
+                <Input
+                  placeholder="Wedding Location"
+                  className="mt-2 border-0 border-b-2 border-gray-400 bg-transparent px-0 py-2 text-gray-900 placeholder-gray-500 focus:border-gray-600 focus:ring-0"
+                />
+              </div>
+
+              <div>
+                <Label className="font-medium text-gray-800 text-sm">Guest Count</Label>
+                <Input
+                  placeholder="Guest Count"
+                  className="mt-2 border-0 border-b-2 border-gray-400 bg-transparent px-0 py-2 text-gray-900 placeholder-gray-500 focus:border-gray-600 focus:ring-0"
+                />
+              </div>
+
+              <div>
+                <Label className="font-medium text-gray-800 text-sm">Tell us more about your wedding *</Label>
+                <Textarea
+                  placeholder="Share your wedding story, location and what film coverage you want..."
+                  className="mt-2 border-0 border-b-2 border-gray-400 bg-transparent px-0 py-2 text-gray-900 placeholder-gray-500 focus:border-gray-600 focus:ring-0 min-h-24 resize-none"
+                />
+              </div>
+            </div>
+
+            {/* Schedule a Call Section */}
+            <div className="mt-12 pt-8 border-t border-gray-400">
+              <h3 className="font-serif text-2xl font-bold text-black mb-2">Schedule a call</h3>
+              <p className="text-sm text-gray-600 mb-6">
+                Pick your preferred day and time and we'll confirm by email.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* Calendar */}
+                <div>
+                  <div className="bg-white p-4 rounded">
+                    <div className="mb-4 flex items-center justify-between">
+                      <button className="text-gray-600 hover:text-gray-900">&lt;</button>
+                      <h4 className="font-medium text-gray-900">
+                        {currentDate.toLocaleDateString("en-US", { month: "long", year: "numeric" })}
+                      </h4>
+                      <button className="text-gray-600 hover:text-gray-900">&gt;</button>
+                    </div>
+
+                    <div className="grid grid-cols-7 gap-2 text-center text-xs font-medium text-gray-600 mb-2">
+                      {["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"].map((d) => (
+                        <div key={d}>{d}</div>
+                      ))}
+                    </div>
+
+                    <div className="grid grid-cols-7 gap-2 text-center text-sm">
+                      {emptyDays.map((_, i) => (
+                        <div key={`empty-${i}`}></div>
+                      ))}
+                      {days.map((day) => (
+                        <button
+                          key={day}
+                          onClick={() =>
+                            setSelectedDate(
+                              `${currentDate.getFullYear()}-${String(currentDate.getMonth() + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`
+                            )
+                          }
+                          className={`py-1 rounded text-sm ${
+                            selectedDate?.includes(`-${String(day).padStart(2, "0")}`)
+                              ? "bg-gray-900 text-white"
+                              : "text-gray-900 hover:bg-gray-200"
+                          }`}
+                        >
+                          {day}
+                        </button>
                       ))}
                     </div>
                   </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Tell Us About Your Vision</Label>
-                    <Textarea
-                      id="message"
-                      placeholder="Share your story, vision, and any special details about your day..."
-                      className="border-gray-300 min-h-[120px]"
-                    />
+                  <div className="mt-4 text-xs">
+                    <button className="text-gray-600 hover:text-gray-900 underline">RESET</button>
                   </div>
+                </div>
 
-                  <Button className="w-full bg-black hover:bg-gray-900 text-lg py-6">Send Inquiry</Button>
-                </CardContent>
-              </Card>
+                {/* Time Slots */}
+                <div>
+                  <p className="text-sm font-medium text-gray-800 mb-4 uppercase tracking-wide">Pick a Time</p>
+                  <div className="grid grid-cols-2 gap-3">
+                    {timeSlots.map((time) => (
+                      <button
+                        key={time}
+                        onClick={() => setSelectedTime(time)}
+                        className={`py-3 px-4 rounded border text-sm font-medium transition-colors ${
+                          selectedTime === time
+                            ? "bg-gray-900 text-white border-gray-900"
+                            : "border-gray-400 text-gray-900 hover:border-gray-900"
+                        }`}
+                      >
+                        {time}
+                      </button>
+                    ))}
+                  </div>
+                  {selectedTime && (
+                    <button className="mt-6 w-full py-3 px-4 bg-gray-900 text-white rounded text-sm font-medium hover:bg-black">
+                      CONFIRM SLOT
+                    </button>
+                  )}
+                </div>
+              </div>
             </div>
 
-            {/* Contact Info */}
-            <div className="space-y-6">
-              <Card className="border-gray-300">
-                <CardHeader>
-                  <CardTitle className="font-serif text-xl text-black">Get In Touch</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <Phone className="w-5 h-5 text-gray-700" />
-                    <div>
-                      <p className="font-medium text-black">Phone</p>
-                      <p className="text-gray-700">+254 700 000 000</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-3">
-                    <Mail className="w-5 h-5 text-gray-700" />
-                    <div>
-                      <p className="font-medium text-black">Email</p>
-                      <p className="text-gray-700">hello@kaplongcreative.com</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-3">
-                    <MessageCircle className="w-5 h-5 text-gray-700" />
-                    <div>
-                      <p className="font-medium text-black">WhatsApp</p>
-                      <p className="text-gray-700">Quick responses</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-3">
-                    <Instagram className="w-5 h-5 text-gray-700" />
-                    <div>
-                      <p className="font-medium text-black">Instagram</p>
-                      <p className="text-gray-700">@kaplongcreative</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="border-gray-300">
-                <CardContent className="p-6">
-                  <h3 className="font-serif font-semibold text-black mb-3">Quick Response</h3>
-                  <p className="text-gray-700 mb-4">
-                    Need immediate assistance? Click below to start a WhatsApp conversation.
-                  </p>
-                  <Button className="w-full bg-green-600 hover:bg-green-700">
-                    <MessageCircle className="w-4 h-4 mr-2" />
-                    WhatsApp Us
-                  </Button>
-                </CardContent>
-              </Card>
-
-              <Card className="border-gray-300">
-                <CardContent className="p-6">
-                  <h3 className="font-serif font-semibold text-black mb-3">Based in Kenya</h3>
-                  <p className="text-gray-700">
-                    We're located in Nairobi and available for weddings across Kenya and internationally. Travel costs
-                    calculated separately for destination weddings.
-                  </p>
-                </CardContent>
-              </Card>
+            {/* Submit Button */}
+            <div className="mt-12 pt-8 border-t border-gray-400">
+              <Button className="text-black bg-transparent hover:bg-gray-200 underline px-0 py-2 h-auto font-medium text-sm">
+                SUBMIT FORM
+              </Button>
             </div>
           </div>
         </div>
