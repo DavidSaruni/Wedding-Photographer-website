@@ -1,7 +1,6 @@
 'use client'
 
 import { Navigation } from "@/components/Navigation"
-import Footer from "@/components/Footer"
 import Link from "next/link"
 import Image from "next/image"
 import { useState, useEffect } from "react"
@@ -10,69 +9,69 @@ const YOUTUBE_CHANNEL = "kaplongcreative"
 const YOUTUBE_VIDEOS = [
   {
     id: "q4Zo-h7i8IQ",
-    title: "Wedding Highlight Film 1",
+    title: "MIKE & ANNA | A Kikuyu–Burji Marsabit Wedding Trailer",
     thumbnail: "https://img.youtube.com/vi/q4Zo-h7i8IQ/maxresdefault.jpg",
-    date: "2024-12-01",
+    date: "2025-12-08",
   },
   {
     id: "uUOWMw3h0dc",
-    title: "Wedding Highlight Film 2",
+    title: "Yasin ❤️ Salma | Muslim Wedding Highlight",
     thumbnail: "https://img.youtube.com/vi/uUOWMw3h0dc/maxresdefault.jpg",
-    date: "2024-11-28",
+    date: "2025-11-15",
   },
   {
     id: "x8GqVdG-8II",
-    title: "Wedding Highlight Film 3",
+    title: "Martin & Faith | Cinematic Wedding Highlight | Nakuru",
     thumbnail: "https://img.youtube.com/vi/x8GqVdG-8II/maxresdefault.jpg",
-    date: "2024-11-25",
+    date: "2025-11-06",
   },
   {
     id: "OX8UFrrkNk0",
-    title: "Wedding Highlight Film 4",
+    title: "Susan & Chris | A Cinematic Nyombo Trailer | Bungoma, Kenya",
     thumbnail: "https://img.youtube.com/vi/OX8UFrrkNk0/maxresdefault.jpg",
-    date: "2024-11-22",
+    date: "2025-10-27",
   },
   {
     id: "YwDa_cDVuOI",
-    title: "Wedding Highlight Film 5",
+    title: "Tiff & Max's Oceanfront Traditional Wedding",
     thumbnail: "https://img.youtube.com/vi/YwDa_cDVuOI/maxresdefault.jpg",
-    date: "2024-11-19",
+    date: "2025-08-05",
   },
   {
     id: "-bKNDgGL-Lw",
-    title: "Wedding Highlight Film 6",
+    title: "Maggy & Harun's Magical Vipingo Wedding | Cinematic Wedding Video Trailer",
     thumbnail: "https://img.youtube.com/vi/-bKNDgGL-Lw/maxresdefault.jpg",
-    date: "2024-11-16",
+    date: "2025-09-12",
   },
   {
     id: "RRcP-azqNug",
-    title: "Wedding Highlight Film 7",
+    title: "Maggy & Harun's Magical Vipingo Wedding | Cinematic Wedding Video Trailer",
     thumbnail: "https://img.youtube.com/vi/RRcP-azqNug/maxresdefault.jpg",
-    date: "2024-11-13",
+    date: "2025-09-12",
   },
   {
     id: "1ngrLNf1KcI",
-    title: "Wedding Highlight Film 8",
+    title: "Dr. Robin & Dr. Colette's Magical Nyombo Celebration | in Kendubay",
     thumbnail: "https://img.youtube.com/vi/1ngrLNf1KcI/maxresdefault.jpg",
-    date: "2024-11-10",
+    date: "2025-08-19",
   },
   {
     id: "VHjccurKLaA",
-    title: "Wedding Highlight Film 9",
+    title: "Herbert & Joan's Stunning Wedding in Kericho | Unforgettable Highlights",
     thumbnail: "https://img.youtube.com/vi/VHjccurKLaA/maxresdefault.jpg",
-    date: "2024-11-07",
+    date: "2025-08-14",
   },
   {
     id: "q6B1RoAI2WM",
-    title: "Wedding Highlight Film 10",
+    title: "A Cross-Cultural Love Story | Tiff & Max's Traditional Dowry Ceremony in Miritini",
     thumbnail: "https://img.youtube.com/vi/q6B1RoAI2WM/maxresdefault.jpg",
-    date: "2024-11-04",
+    date: "2025-07-29",
   },
   {
     id: "uq9xANTpTF4",
-    title: "Wedding Highlight Film 11",
+    title: "Kaplong Creative Wedding Film",
     thumbnail: "https://img.youtube.com/vi/uq9xANTpTF4/maxresdefault.jpg",
-    date: "2024-11-01",
+    date: "2025-07-15",
   },
 ]
 
@@ -207,8 +206,6 @@ export default function FilmsPage() {
           </div>
         </div>
       </div>
-
-      <Footer />
     </div>
   )
 }
