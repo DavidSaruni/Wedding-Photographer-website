@@ -9,52 +9,52 @@ import { useState, useEffect } from "react"
 const YOUTUBE_CHANNEL = "kaplongcreative"
 const YOUTUBE_VIDEOS = [
   {
-    id: "dQw4w9WgXcQ",
-    title: "Our Love Story",
-    thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
-    date: "2024-12-15",
-  },
-  {
-    id: "jNQXAC9IVRw",
-    title: "Destination Wedding in the Mountains",
-    thumbnail: "https://img.youtube.com/vi/jNQXAC9IVRw/maxresdefault.jpg",
+    id: "xO_TqmjbXAk",
+    title: "MIKE & ANNA | A Kikuyu-Burji Marsabit Wedding Trailer",
+    thumbnail: "https://img.youtube.com/vi/xO_TqmjbXAk/maxresdefault.jpg",
     date: "2024-11-20",
   },
   {
-    id: "9bZkp7q19f0",
-    title: "Intimate Garden Ceremony",
-    thumbnail: "https://img.youtube.com/vi/9bZkp7q19f0/maxresdefault.jpg",
-    date: "2024-10-10",
+    id: "gKCGWV5Hs4Y",
+    title: "Yasin ❤ Salma | Muslim Wedding Highlight",
+    thumbnail: "https://img.youtube.com/vi/gKCGWV5Hs4Y/maxresdefault.jpg",
+    date: "2024-11-10",
+  },
+  {
+    id: "Wj1V5zOD5jI",
+    title: "Martin & Faith | Cinematic Wedding Highlight | Nakuru",
+    thumbnail: "https://img.youtube.com/vi/Wj1V5zOD5jI/maxresdefault.jpg",
+    date: "2024-10-28",
+  },
+  {
+    id: "KQ8Gs9jV3c8",
+    title: "Susan & Chris | A Cinematic Nyombo Trailer | Bungoma",
+    thumbnail: "https://img.youtube.com/vi/KQ8Gs9jV3c8/maxresdefault.jpg",
+    date: "2024-10-15",
+  },
+  {
+    id: "hW8P_Gkq3Ik",
+    title: "George & Vero | Wedding Teaser",
+    thumbnail: "https://img.youtube.com/vi/hW8P_Gkq3Ik/maxresdefault.jpg",
+    date: "2024-09-30",
   },
   {
     id: "tYzMGcUty6s",
-    title: "Grand Reception Highlights",
+    title: "Intimate Garden Ceremony",
     thumbnail: "https://img.youtube.com/vi/tYzMGcUty6s/maxresdefault.jpg",
-    date: "2024-09-05",
+    date: "2024-09-15",
   },
   {
     id: "aqz-KE-bpKQ",
     title: "Emotional First Look",
     thumbnail: "https://img.youtube.com/vi/aqz-KE-bpKQ/maxresdefault.jpg",
-    date: "2024-08-15",
+    date: "2024-08-28",
   },
   {
     id: "xfY3h9vsKkE",
     title: "Sunset Beach Wedding",
     thumbnail: "https://img.youtube.com/vi/xfY3h9vsKkE/maxresdefault.jpg",
-    date: "2024-07-22",
-  },
-  {
-    id: "ZjibEkDoV6A",
-    title: "Cinematic Same-Day Edit",
-    thumbnail: "https://img.youtube.com/vi/ZjibEkDoV6A/maxresdefault.jpg",
-    date: "2024-06-18",
-  },
-  {
-    id: "oUFJJNQGwhk",
-    title: "Modern Urban Wedding",
-    thumbnail: "https://img.youtube.com/vi/oUFJJNQGwhk/maxresdefault.jpg",
-    date: "2024-05-30",
+    date: "2024-08-10",
   },
 ]
 
@@ -129,7 +129,7 @@ export default function FilmsPage() {
             <h3 className="text-2xl font-serif font-bold text-black mb-8">
               {selectedVideo ? "More Films" : "All Films"}
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {YOUTUBE_VIDEOS.map((video) => (
                 <button
                   key={video.id}
