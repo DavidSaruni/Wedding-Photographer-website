@@ -45,37 +45,34 @@ export default function ContactPage() {
       {/* Navigation */}
       <Navigation />
 
-      <div className="pt-32 pb-20">
-        <div className="max-w-4xl mx-auto px-6">
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-5xl lg:text-6xl font-serif font-bold text-black mb-4 text-balance">
-              Your Story is Too Good
-            </h1>
-            <h2 className="text-5xl lg:text-6xl font-serif font-light text-black mb-8 text-balance">
-              Not to be Captured
-            </h2>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-gray-700">
-              <div>
-                <p className="font-medium">Email hello@kaplongcreative.com</p>
-                <p>Telephone +254 796 431 935</p>
-              </div>
-              <div className="text-2xl text-gray-500">&</div>
-              <div>
-                <p className="font-medium">Hours: Monday – Friday</p>
-                <p>9:00am – 5:00pm EAT</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Featured Image */}
-          <div className="relative h-64 mb-16 rounded-lg overflow-hidden">
+      <div className="pt-24 pb-20">
+        <div className="max-w-5xl mx-auto px-6">
+          {/* Hero Section with Image */}
+          <div className="relative h-80 rounded-3xl overflow-hidden mb-16 shadow-2xl">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/JIM_5974-aj9zCmAMde1I0aBluyhghD6hSoSaiH.jpg"
-              alt="Wedding Photography"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-TmxKq5Tn3i8Zt6elANTEmL2PExVAJs.png"
+              alt="Let's Create Magic Together"
               fill
               className="object-cover"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 flex flex-col items-center justify-center">
+              <h1 className="text-4xl lg:text-5xl font-serif font-bold text-white mb-4 text-balance px-6 text-center">
+                Let's Create Magic Together
+              </h1>
+              <p className="text-lg text-gray-100 max-w-2xl text-center px-6">
+                Ready to capture your love story? We'll get back within 24 hours. Your love story deserves to be told beautifully.
+              </p>
+            </div>
+          </div>
+
+          {/* Heading below hero */}
+          <div className="text-center mb-16">
+            <h2 className="text-5xl lg:text-6xl font-serif font-bold text-black mb-6 text-balance">
+              Let's Create Magic Together
+            </h2>
+            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+              Ready to capture your love story? We'll get back within 24 hours. Your love story deserves to be told beautifully.
+            </p>
           </div>
 
           {/* Contact Form */}
