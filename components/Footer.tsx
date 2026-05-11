@@ -2,6 +2,8 @@ import Link from "next/link"
 import Image from "next/image"
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear()
+
   return (
     <footer className="bg-black text-white py-12">
       <div className="max-w-7xl mx-auto px-6">
@@ -101,7 +103,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-          <p className="text-gray-400">© 2024 Kaplong Creative Studio. All rights reserved.</p>
+          <p className="text-gray-400">© {currentYear} Kaplong Creative Studio. All rights reserved.</p>
         </div>
       </div>
     </footer>
